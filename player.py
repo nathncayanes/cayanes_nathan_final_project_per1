@@ -25,7 +25,7 @@ class Player(pg.sprite.Sprite):
                            "right_idle":[], "left_idle":[], "up_idle":[], "down_idle":[]}
 
         for animation in self.animations.keys():
-            full_path = "animations/" + animation
+            full_path = "animations/code file/" + animation
             self.animations[animation] = import_folder(full_path)
     # just like in the myGame project, we are defining the controls
     def input(self):
