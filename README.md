@@ -4,9 +4,7 @@ This is my version of the popular videogame, "Stardew Valley" that I made using 
 
 ## Description
 
-My project uses Pygame, Tiled, and Photoshop to create the game. I used a combination of Photoshop and Tiled in order in order to create visuals of my game such as the character sprites and map. This is for both academic and 
-
-An in-depth paragraph about your project and overview of use.
+My project uses Pygame, Tiled, and Photoshop to create the game. I used a combination of Photoshop and Tiled in order in order to create visuals of my game such as the character sprites and map. On the other hand, Pygame was the library of Python that I used to create my game loop. This is for both academic and entertainment purposes.
 
 ## Getting Started
 
@@ -22,22 +20,16 @@ An in-depth paragraph about your project and overview of use.
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+* Download my files on my Github using the link above.
+* Open the main.py folder
+* Click the Play Button on the top right corner of the main.py file
+* Enjoy!
 
 ## Help
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+Make sure that all folders are in the right place and because the program depends on the organization of the files that I have set. Other than that, please make sure that you have the right version of Python and Pygame installed as well as that you haven't accidentally renamed a file.
 
 ## Authors
-
-Contributors names and contact info
 
 Nathan Cayanes
 [@nathncayanes](https://github.com/nathncayanes)
@@ -54,8 +46,6 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [freeCodeCamp.org](https://www.youtube.com/watch?v=R9apl6B_ZgI&ab_channel=freeCodeCamp.org)
+* [Coding with Russ](https://www.youtube.com/watch?v=nXOVcOBqFwM&ab_channel=CodingWithRuss)
+* [Clear Code](https://www.youtube.com/watch?v=N6xqCwblyiw&ab_channel=ClearCode)
