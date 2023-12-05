@@ -45,7 +45,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
+Thank you to the following sources for both inspiration and helping me learn the skills necessary to create this game.
 * [freeCodeCamp.org](https://www.youtube.com/watch?v=R9apl6B_ZgI&ab_channel=freeCodeCamp.org)
 * [Coding with Russ](https://www.youtube.com/watch?v=nXOVcOBqFwM&ab_channel=CodingWithRuss)
 * [Clear Code](https://www.youtube.com/watch?v=N6xqCwblyiw&ab_channel=ClearCode)
