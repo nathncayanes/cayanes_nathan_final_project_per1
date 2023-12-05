@@ -16,7 +16,7 @@ My project uses Pygame, Tiled, and Photoshop to create the game. I used a combin
 ### Installing
 
 * Download all Python files on my Github (https://github.com/nathncayanes) and all visual elements which are located there as well
-* THere shouldn't be any modifications necessary and can be ready to play as is
+* There shouldn't be any modifications necessary and can be ready to play as is
 
 ### Executing program
 
