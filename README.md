@@ -4,8 +4,7 @@ This is my version of the popular videogame, "Stardew Valley" that I made using 
 
 ## Description
 
-My project uses Pygame, Tiled, and Photoshop to create the game. I used a combination of Photoshop and Tiled in order
-in order to create visuals of my game such as the character sprites and map. This is for 
+My project uses Pygame, Tiled, and Photoshop to create the game. I used a combination of Photoshop and Tiled in order in order to create visuals of my game such as the character sprites and map. This is for both academic and 
 
 An in-depth paragraph about your project and overview of use.
 
@@ -13,13 +12,13 @@ An in-depth paragraph about your project and overview of use.
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Requires Python 3.11 and Pygame
+* Tested on Windows 11
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Download all Python files on my Github (https://github.com/nathncayanes) and all visual elements which are located there as well
+* THere shouldn't be any modifications necessary and can be ready to play as is
 
 ### Executing program
 
@@ -40,20 +39,17 @@ command to run if program contains helper info
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Nathan Cayanes
+[@nathncayanes](https://github.com/nathncayanes)
 
 ## Version History
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
