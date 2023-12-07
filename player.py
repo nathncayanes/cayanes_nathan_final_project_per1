@@ -8,9 +8,10 @@ class Player(pg.sprite.Sprite):
     def __init__(self, pos, group):
         super().__init__(group)
         self.import_assets()
+        self.status = "down_idle"
+        self.frame_index = 0
         # player setup
-        self.image = pg.Surface((32,64))
-        self.image.fill(WHITE)
+        self.image = self.animations[self.status][self.frame_index]
         self.rect = self.image.get_rect(center = pos)
         # player movement
         self.direction = pg.math.Vector2()
@@ -27,6 +28,7 @@ class Player(pg.sprite.Sprite):
         for animation in self.animations.keys():
             full_path = "animations/" + animation
             self.animations[animation] = import_folder(full_path)
+        print(self.animations)
     # just like in the myGame project, we are defining the controls
     def input(self):
         keys = pg.key.get_pressed()
