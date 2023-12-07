@@ -6,7 +6,7 @@ from os import walk
 
 def import_folder(path):
     surface_list = []
-    for folder_name, img_files in walk(path):
+    for folder_name, sub_folder, img_files in walk(path):
         print(img_files)
     #     for image in img_files:
     #         full_path = path + "/" + image
