@@ -6,8 +6,8 @@ from os import walk
 
 def import_folder(path):
     surface_list = []
-    for folder in walk(path):
-        print(folder)
+    for folder_name, img_files in walk(path):
+        print(img_files)
     #     for image in img_files:
     #         full_path = path + "/" + image
     #         image_surf = pg.image.load(full_path).convert_alpha()
