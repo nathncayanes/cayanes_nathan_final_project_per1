@@ -9,7 +9,7 @@ class Player(pg.sprite.Sprite):
         super().__init__(group)
         self.import_assets()
         # imports the folder and the frame_index will help cylce through the different images in each folder
-        self.status = "down_idle"
+        self.status = "down"
         self.frame_index = 0
         # player setup
         self.image = self.animations[self.status][self.frame_index]
@@ -30,6 +30,12 @@ class Player(pg.sprite.Sprite):
             full_path = "animations/images/" + animation
             self.animations[animation] = import_folder(full_path)
         print(self.animations)
+    def animate(self, dt):
+        self.frame_index += 4 * dt
+        # this continnues the animation loop and prevent an error
+        if self.frame_index >= len(self.animations[self.status]):
+            self.frame_index = 0
+        self.image = self.animations[self.status][int(self.frame_index)]
     # just like in the myGame project, we are defining the controls
     def input(self):
         keys = pg.key.get_pressed()
@@ -62,3 +68,4 @@ class Player(pg.sprite.Sprite):
     def update(self, dt):
         self.input()
         self.move(dt)
+        self.animate(dt)
