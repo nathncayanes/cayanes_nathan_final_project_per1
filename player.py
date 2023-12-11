@@ -8,7 +8,8 @@ class Player(pg.sprite.Sprite):
     def __init__(self, pos, group):
         super().__init__(group)
         self.import_assets()
-        self.status = "bellarman_down1"
+        # imports the folder and the frame_index will help cylce through the different images in each folder
+        self.status = "down_idle"
         self.frame_index = 0
         # player setup
         self.image = self.animations[self.status][self.frame_index]

@@ -12,5 +12,5 @@ def import_folder(path):
             full_path = path + "/" + image
             # this is going to allow us to load the images into a list and later call them in a loop
             image_surf = pg.image.load(full_path).convert_alpha()
-            image_surf.append(image_surf)
+            surface_list.append(image_surf)
     return surface_list
