@@ -8,7 +8,7 @@ class Player(pg.sprite.Sprite):
     def __init__(self, pos, group):
         super().__init__(group)
         self.import_assets()
-        self.status = "down_idle"
+        self.status = "bellarman_down1"
         self.frame_index = 0
         # player setup
         self.image = self.animations[self.status][self.frame_index]
@@ -26,7 +26,7 @@ class Player(pg.sprite.Sprite):
                            "right_idle":[], "left_idle":[], "up_idle":[], "down_idle":[]}
 
         for animation in self.animations.keys():
-            full_path = "animations/" + animation
+            full_path = "animations/images/" + animation
             self.animations[animation] = import_folder(full_path)
         print(self.animations)
     # just like in the myGame project, we are defining the controls
