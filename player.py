@@ -31,7 +31,7 @@ class Player(pg.sprite.Sprite):
             self.animations[animation] = import_folder(full_path)
         print(self.animations)
     def animate(self, dt):
-        self.frame_index += 4 * dt
+        self.frame_index += 3 * dt
         # this continnues the animation loop and prevent an error
         if self.frame_index >= len(self.animations[self.status]):
             self.frame_index = 0
@@ -41,18 +41,27 @@ class Player(pg.sprite.Sprite):
         keys = pg.key.get_pressed()
         if keys[pg.K_w]:
             self.direction.y = -1
+            self.status = "up"
         elif keys[pg.K_s]:
             self.direction.y = 1
+            self.status = "down"
         # needs this else statement so that the character stops when we let go of w/s
         else:
             self.direction.y = 0
         if keys[pg.K_a]:
             self.direction.x = -1
+            self.status = "left"
         elif keys[pg.K_d]:
             self.direction.x = 1
+            self.status = "right"
         # same as above, needs this else statement so that the character stops when we let go of a/d
         else:
             self.direction.x = 0
+    def get_status(self):
+        # figures out when the player is stopped
+        if self.direction.magnitude() == 0:
+            # self.status.split splits up the string in the folder name preventing errors such as down_idle_idle
+            self.status = self.status.split("_")[0] + "_idle"
     def move(self, dt):
         # we need to add the line of code below so that python knows what direction the vector is going
         if self.direction.magnitude() > 0:
@@ -67,5 +76,6 @@ class Player(pg.sprite.Sprite):
         self.rect.centery = self.pos.y
     def update(self, dt):
         self.input()
+        self.get_status()
         self.move(dt)
         self.animate(dt)
