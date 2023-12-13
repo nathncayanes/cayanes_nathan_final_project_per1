@@ -11,6 +11,7 @@ My project uses Pygame, Tiled, and Photoshop to create the game. I used a combin
 ### Dependencies
 
 * Requires Python 3.11 and Pygame
+* Requires the Python module pytmx
 * Tested on Windows 11
 
 ### Installing
