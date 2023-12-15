@@ -3,6 +3,7 @@
 import pygame as pg
 from settings import *
 from player import Player
+from map import Map
 
 class Level:
     def __init__(self):
@@ -12,6 +13,10 @@ class Level:
         self.all_sprites = CameraGroup()
         self.setup()
     def setup(self):
+        Map(
+            pos = (0,0),
+            surf = pg.image.load("map/map.png").convert_alpha(),
+            groups = self.all_sprites)
         self.player = Player((640,360), self.all_sprites)
     def run(self, dt):
         self.display_surface.fill(BLACK)
