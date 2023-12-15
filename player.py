@@ -8,7 +8,7 @@ class Player(pg.sprite.Sprite):
     def __init__(self, pos, group):
         super().__init__(group)
         self.import_assets()
-        # imports the folder and the frame_index will help cylce through the different images in each folder
+        # imports the folder and the frame_index will cylce through the different images in each folder
         self.status = "down"
         self.frame_index = 0
         # player setup
@@ -18,23 +18,29 @@ class Player(pg.sprite.Sprite):
         self.direction = pg.math.Vector2()
         self.pos = pg.math.Vector2(self.rect.center)
         self.speed = 200
-    # this is a big decision, either i can create multiple spritesheets or just get multiple pngs with each frame
-    # if i choose the first, i can model the spritesheets after Mr. Cozort's
-    # if i choose the second, i can follow the tutorial more closely
-    # either way i need to make all the designs in photoshop and decide whether to export individually or in one file
+# this is a directory/list of a list that basically uses the full_path variable below to access all of the folders that
+# contain all the image files for the game and compiles them with a list
     def import_assets(self):
         self.animations = {"up": [], "down": [], "left": [], "right": [],
                            "right_idle":[], "left_idle":[], "up_idle":[], "down_idle":[]}
 
         for animation in self.animations.keys():
+            # tells the computer where to look and opens up the folders listed above
             full_path = "animations/images/" + animation
+            # imports them into pygame and I printed it to make sure that it works properly
             self.animations[animation] = import_folder(full_path)
         print(self.animations)
+    # this is the function used to animate the character
     def animate(self, dt):
+        # sets the speed of how fast the animation will cycle
         self.frame_index += 3 * dt
-        # this continnues the animation loop and prevent an error
+        # this continues the animation loop and prevent an error
+        # len is used to find the amount of files in the folder of the direction specified in self.status in self.animations
+        # without this line, the computer will continue adding to the frame_index number and will error as there are only 4
+        # images in each folder but this prevents it from going beyond the amount of images in the folder
         if self.frame_index >= len(self.animations[self.status]):
             self.frame_index = 0
+        # this just cycles through the images in the folder based on the status and the number specified from the frame_index
         self.image = self.animations[self.status][int(self.frame_index)]
     # just like in the myGame project, we are defining the controls
     def input(self):
